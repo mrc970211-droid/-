@@ -1,0 +1,50 @@
+name: 需求分析 / 前端任务
+description: 明确任务范围、分工与验收标准
+title: "[策划或前端] "
+body:
+  - type: dropdown
+    id: phase
+    attributes:
+      label: 任务类型
+      options:
+        - 需求分析（当前阶段）
+        - 前端实现（须产品负责人已批准进入开发）
+    validations:
+      required: true
+  - type: textarea
+    id: goal
+    attributes:
+      label: 目标与需求来源
+      description: 写明要解决的问题及对应 PRD、问题或决策链接。
+    validations:
+      required: true
+  - type: textarea
+    id: scope
+    attributes:
+      label: 范围与不包含内容
+    validations:
+      required: true
+  - type: textarea
+    id: behavior
+    attributes:
+      label: 页面、流程、业务规则与异常状态
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: 验收标准
+      description: 列出可验证的结果；策划任务应区分原文要求、建议及待确认项。
+    validations:
+      required: true
+  - type: textarea
+    id: ownership
+    attributes:
+      label: 分工
+      value: |
+        Codex：需求分析、代码检查、文档与验收记录整理。
+        Claude：当前评审页面和流程；开发获准后负责前端实现及修复。
+        产品负责人：确认取舍、验收、决定合并。
+  - type: textarea
+    id: questions
+    attributes:
+      label: 依赖、待确认问题与开发批准来源
+      description: 有阻塞性问题时不得擅自按假设实现。
